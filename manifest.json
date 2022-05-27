@@ -1,0 +1,11 @@
+{
+   "id": "view-it-in-esploro",
+   "title": "View It in Esploro",
+   "subtitle": "View It in Esploro",
+   "author": "Weizmann Institute of Science Library | Anton Reznik",
+   "description": "For more information on these tutorials, see https://https://weizmann.ac.il/library",
+   "icon": {
+      "type": "url",
+      "value": "/assets/icon-portal.png"
+   }
+}

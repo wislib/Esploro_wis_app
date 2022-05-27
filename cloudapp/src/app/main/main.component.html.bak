@@ -1,0 +1,44 @@
+<div *ngIf="entities$ | async as entities">
+  <ng-container 
+    *ngIf="entities.length > 0; then entitylist; else noentities"
+  ></ng-container>
+  <ng-template #noentities>
+    <h1>Welcome!</h1>
+    <div class="highlight">Navigate to a page in Alma to view a list of Bib records.</div>
+  </ng-template>
+
+  <ng-template #entitylist>
+  <mat-form-field>
+      <mat-label>Esploro URL</mat-label>
+      <input matInput type="text" [(ngModel)]="esploroBaseUrl">
+      <button *ngIf="esploroBaseUrl" matSuffix mat-icon-button aria-label="Save" (click)="saveEsploroUrl()">
+        <mat-icon>save</mat-icon>
+      </button>
+    </mat-form-field>
+	<mat-form-field>
+      <mat-label>Esploro Inst</mat-label>
+      <input matInput type="text" [(ngModel)]="esploroInst">
+      <button *ngIf="esploroInst" matSuffix mat-icon-button aria-label="Save" (click)="saveEsploroInst()">
+        <mat-icon>save</mat-icon>
+      </button>
+    </mat-form-field>
+    <!--<div style="font-size: 50%;">For example: <br/>https://weizmann.primo.exlibrisgroup.com/permalink/972WIS_INST/1232l5a/alma</div>-->
+
+    <div class="eca-actions"></div>
+    <h1>Research Assets:</h1>
+   <!-- <ol *ngFor="let entity of entities">-->
+	 <ol>   <mat-button *ngFor="let entity of entities">
+      <li>
+        <a href="https://weizmann.esploro.exlibrisgroup.com/esploro/outputs/journalArticle/{{entity.Aid}}?institution=972WIS_INST" target="_blank" title="Opens in a new window"
+         ><span style="font-weight: bold; font-size:16px;font-family: Roboto,Helvetica Neue,sans-serif;"><!--{{entity.link}}-->
+         {{entity.title}}</span>
+         {{entity.author ? (" by " + entity.author) : ""}}
+         {{"(" + entity.dop + ")"}}
+        </a>
+        </li>    </mat-button>
+    </ol>
+  </ng-template>
+</div>
+<div class="loading-shade" *ngIf="loading">
+  <mat-spinner diameter="50"></mat-spinner>
+</div>
