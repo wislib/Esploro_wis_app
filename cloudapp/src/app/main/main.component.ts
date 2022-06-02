@@ -96,7 +96,7 @@ export class MainComponent implements OnInit, OnDestroy {
         author: r.creators[0].creatorname,
         dop: r.displayedDateByPriorityEsploroCP, 
         type: EntityType.IER,
-        link: `${this.primoBaseUrl}esploro/outputs/journalArticle/${r.originalRepository.assetId}`
+        link: `${this.primoBaseUrl}/esploro/outputs/journalArticle/${r.originalRepository.assetId}`
       }))),
       tap(()=>this.loading = false)
     )
