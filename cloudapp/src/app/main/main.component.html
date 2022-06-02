@@ -16,19 +16,24 @@
   display:block;
 }
 h1 {    margin-top: -9px;}
+h1 {    margin-top: -9px;}
+i#expl{right: -46px;
+top: 0px;
+position: absolute;}
+
 </style>
 <label class="collapse" for="_1"><i _ngcontent-cxo-c630="" icon="" class="uxf-icon uxf-settings ng-star-inserted"></i></label>
 <input id="_1" type="checkbox"> 
 <div>
   <mat-form-field>
-  <mat-label>Your Institution Portal URL:</mat-label>
+  <mat-label>Your Esploro Portal Base URL: </mat-label>
   <input matInput type="text" [(ngModel)]="primoBaseUrl">
   <button *ngIf="primoBaseUrl" matSuffix mat-icon-button aria-label="Save" (click)="savePrimoUrl()">
-    <mat-icon>save</mat-icon>
-  </button>
+    <mat-icon>save</mat-icon>   
+  </button>  
+  <i _ngcontent-thg-c622="" icon="" id="expl" title="Example: https://weizmann.esploro.exlibrisgroup.com"class="uxf-icon uxf-info-circle ng-star-inserted"></i>
 </mat-form-field>
 </div>
-
 
 <div *ngIf="entities$ | async as entities">
   <ng-container *ngIf="entities.length > 0; then entitylist; else noentities"></ng-container>

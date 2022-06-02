@@ -94,9 +94,9 @@ export class MainComponent implements OnInit, OnDestroy {
         id: r.originalRepository.assetId,
         title: r.title,
         author: r.creators[0].creatorname,
-        dop: r.displayedDateByPriorityEsploroCP, // TODO
+        dop: r.displayedDateByPriorityEsploroCP, 
         type: EntityType.IER,
-        link: `${this.primoBaseUrl}${r.originalRepository.assetId}`
+        link: `${this.primoBaseUrl}esploro/outputs/journalArticle/${r.originalRepository.assetId}`
       }))),
       tap(()=>this.loading = false)
     )
@@ -105,7 +105,6 @@ export class MainComponent implements OnInit, OnDestroy {
   savePrimoUrl() {
     var toSave = { "primoBaseUrl": this.primoBaseUrl };
     this.settingsService.set(toSave).subscribe( response => console.log('Saved') )
-    //this.displayEntBibs();
     this.displayEntAssets();
       
   }

@@ -1,9 +1,9 @@
 {
    "id": "view-it-in-esploro",
    "title": "View It in Esploro",
-   "subtitle": "View It in Esploro",
+   "subtitle": "Links to assets in Esploro Portal",
    "author": "Weizmann Institute of Science Library | Anton Reznik",
-   "description": "For more information on these tutorials, see https://https://weizmann.ac.il/library",
+   "description": "For more information on these App see https://developers.exlibrisgroup.com/appcenter/view-it-in-portal/",
    "icon": {
       "type": "url",
       "value": "/assets/icon-portal.png"
