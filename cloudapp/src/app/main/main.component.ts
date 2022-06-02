@@ -8,7 +8,6 @@ import { EntityType,CloudAppRestService, CloudAppEventsService, CloudAppSettings
   import { AppService } from '../app.service';
   import { FormGroup } from '@angular/forms';
   //import { AlertService, CloudAppSettingsService, FormGroupUtil } from '@exlibris/exl-cloudapp-angular-lib';
-  //import { Settings } from 'settings';
   /***********************END new impots for form  */
 
 
