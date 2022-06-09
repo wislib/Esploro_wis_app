@@ -7,5 +7,9 @@
    "icon": {
       "type": "url",
       "value": "/assets/icon-portal.png"
+   },
+   "pages": {
+     "help": "https://weizmann.libanswers.com/faq/368873"
    }
+         
 }
