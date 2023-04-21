@@ -10,6 +10,11 @@
    },
    "pages": {
      "help": "https://weizmann.libanswers.com/faq/368873"
+   },
+   "contentSecurity": {
+      "sandbox": {
+         "popups": true
+      }
    }
          
 }
